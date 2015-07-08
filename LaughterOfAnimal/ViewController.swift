@@ -14,7 +14,19 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     var player : AVAudioPlayer!
     var playButton : UIButton!
     
-
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var apcLabel: UILabel!
+    @IBOutlet weak var peakLabel: UILabel!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    @IBAction func pushRecord(sender: AnyObject) {
+        NSLog("pushRecord Button")
+    }
+    @IBAction func pushStop(sender: AnyObject) {
+        NSLog("pushStop Button")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
