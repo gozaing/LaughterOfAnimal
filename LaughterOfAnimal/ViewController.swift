@@ -11,14 +11,20 @@ import AVFoundation
 
 class ViewController: UIViewController,AVAudioPlayerDelegate {
     
+    // 再生用
     var player : AVAudioPlayer!
     var playButton : UIButton!
+    
+    // 録音用
+    var recorder: AVAudioRecorder!
+    var meterTimer: NSTimer!
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var apcLabel: UILabel!
     @IBOutlet weak var peakLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
     
     @IBAction func pushRecord(sender: AnyObject) {
         NSLog("pushRecord Button")
@@ -27,6 +33,14 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         NSLog("pushStop Button")
     }
     
+    // TODO
+    // record permission
+    // record session
+    // record setup (file and file path)
+    // record progress disp
+    // record finish (delegate)
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
