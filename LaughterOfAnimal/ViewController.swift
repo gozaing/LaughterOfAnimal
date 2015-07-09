@@ -65,17 +65,20 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         self.stopButton.enabled = false
         self.recordButton.enabled = true
         
+        
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // NSBundleにファイルを配置(SupportFiles)
-        let soundFilePath : NSString = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
+        // Document から音声ファイルを取得
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+        let filePath : String = (documentsPath as String) + "/Recorded.m4a"
         
         // ファイルパス
-        let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath as String)!
-        
+        let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
+
         // AVAudioPlayerのインスタンス生成
         player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
         
