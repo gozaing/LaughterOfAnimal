@@ -72,19 +72,6 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Document から音声ファイルを取得
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
-        let filePath : String = (documentsPath as String) + "/Recorded.m4a"
-        
-        // ファイルパス
-        let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
-
-        // AVAudioPlayerのインスタンス生成
-        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
-        
-        // AVAudioPlayerのデリゲートセット
-        player.delegate = self
-        
         // button
         playButton = UIButton()
         playButton.frame.size = CGSizeMake(160, 60)
@@ -103,6 +90,24 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     }
     
     func onClicPlay(sender: UIButton){
+        
+        
+        // Document から音声ファイルを取得
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+        let filePath : String = (documentsPath as String) + "/Recorded.m4a"
+        
+        // ファイルパス
+        let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
+        
+        // AVAudioPlayerのインスタンス生成
+        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        
+        println(player.url)
+        
+        // AVAudioPlayerのデリゲートセット
+        player.delegate = self
+
+        
         if player.playing == true {
             player.stop()
             sender.setTitle("start", forState: .Normal)
