@@ -13,7 +13,8 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     
     // 再生用
     var player : AVAudioPlayer!
-    var playButton : UIButton!
+    var playButton1 : UIButton!
+    var playButton2 : UIButton!
     
     // 録音用
     var recorder: AVAudioRecorder!
@@ -72,15 +73,25 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // button
-        playButton = UIButton()
-        playButton.frame.size = CGSizeMake(160, 60)
-        playButton.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-        playButton.setTitle("music start", forState: UIControlState.Normal)
-        playButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        playButton.backgroundColor = UIColor.grayColor()
-        playButton.addTarget(self, action: "onClicPlay:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(playButton)
+        // music start button
+        playButton1 = UIButton()
+        playButton1.frame.size = CGSizeMake(160, 60)
+        playButton1.layer.position = CGPoint(x: self.view.frame.width/2, y: (self.view.frame.height/5)*2)
+        playButton1.setTitle("music start1", forState: UIControlState.Normal)
+        playButton1.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        playButton1.backgroundColor = UIColor.grayColor()
+        playButton1.addTarget(self, action: "onClicPlay1:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(playButton1)
+        
+        // music start 2 button
+        playButton2 = UIButton()
+        playButton2.frame.size = CGSizeMake(160, 60)
+        playButton2.layer.position = CGPoint(x: self.view.frame.width/2, y: (self.view.frame.height/5)*4)
+        playButton2.setTitle("music start2", forState: UIControlState.Normal)
+        playButton2.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        playButton2.backgroundColor = UIColor.grayColor()
+        playButton2.addTarget(self, action: "onClicPlay2:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(playButton2)
         
     }
 
@@ -116,6 +127,11 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             sender.setTitle("stop", forState: .Normal)
         }
     }
+    
+    func onClicPlay2(sender: UIButton){
+        println("onClickPlay2")
+    }
+    
     
     func recordWithPermission(setup:Bool) {
         let session:AVAudioSession = AVAudioSession.sharedInstance()
