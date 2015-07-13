@@ -14,6 +14,7 @@
 		4F937E491B4AAE050081D6B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F937E481B4AAE050081D6B7 /* Images.xcassets */; };
 		4F937E4C1B4AAE050081D6B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F937E4A1B4AAE050081D6B7 /* LaunchScreen.xib */; };
 		4F937E581B4AAE050081D6B7 /* LaughterOfAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937E571B4AAE050081D6B7 /* LaughterOfAnimalTests.swift */; };
+		4FAF7D6F1B53380200694A0B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF7D6E1B53380200694A0B /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4F937E511B4AAE050081D6B7 /* LaughterOfAnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaughterOfAnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F937E561B4AAE050081D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F937E571B4AAE050081D6B7 /* LaughterOfAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaughterOfAnimalTests.swift; sourceTree = "<group>"; };
+		4FAF7D6E1B53380200694A0B /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				4F937E411B4AAE050081D6B7 /* AppDelegate.swift */,
 				4F937E431B4AAE050081D6B7 /* ViewController.swift */,
+				4FAF7D6E1B53380200694A0B /* EditViewController.swift */,
 				4F937E451B4AAE050081D6B7 /* Main.storyboard */,
 				4F937E481B4AAE050081D6B7 /* Images.xcassets */,
 				4F937E4A1B4AAE050081D6B7 /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 			files = (
 				4F937E441B4AAE050081D6B7 /* ViewController.swift in Sources */,
 				4F937E421B4AAE050081D6B7 /* AppDelegate.swift in Sources */,
+				4FAF7D6F1B53380200694A0B /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

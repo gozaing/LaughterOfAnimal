@@ -223,6 +223,10 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         }
     }
     
+    @IBAction func backFromSecondView(segue:UIStoryboardSegue){
+        NSLog("fromEditViewController")
+    }
+    
 }
 
 extension ViewController : AVAudioRecorderDelegate {
