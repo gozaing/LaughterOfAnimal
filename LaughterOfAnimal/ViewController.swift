@@ -73,10 +73,16 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let viewSizeWidth = self.view.frame.width/10
+        let viewSizeHeight = self.view.frame.height/10
+        
+        let buttonWidth:CGFloat = 100
+        let buttonHeight:CGFloat = 60
+        
         // music start button
         playButton1 = UIButton()
-        playButton1.frame.size = CGSizeMake(160, 60)
-        playButton1.layer.position = CGPoint(x: self.view.frame.width/2, y: (self.view.frame.height/5)*2)
+        playButton1.frame.size = CGSizeMake(buttonWidth, buttonHeight)
+        playButton1.layer.position = CGPoint(x: viewSizeWidth*2, y: viewSizeHeight*2)
         playButton1.setTitle("music start1", forState: UIControlState.Normal)
         playButton1.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         playButton1.backgroundColor = UIColor.grayColor()
@@ -85,8 +91,8 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         
         // music start 2 button
         playButton2 = UIButton()
-        playButton2.frame.size = CGSizeMake(160, 60)
-        playButton2.layer.position = CGPoint(x: self.view.frame.width/2, y: (self.view.frame.height/5)*4)
+        playButton2.frame.size = CGSizeMake(buttonWidth, buttonHeight)
+        playButton2.layer.position = CGPoint(x: viewSizeWidth*6, y: viewSizeHeight*2)
         playButton2.setTitle("music start2", forState: UIControlState.Normal)
         playButton2.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         playButton2.backgroundColor = UIColor.grayColor()
