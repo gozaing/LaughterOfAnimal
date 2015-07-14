@@ -73,6 +73,23 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Document から音声ファイルを取得
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+        let filePath : String = (documentsPath as String) + "/Recorded.m4a"
+        
+        // ファイルパス
+        let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
+        
+        // AVAudioPlayerのインスタンス生成
+        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        
+        //        println(player.url)
+        
+        // AVAudioPlayerのデリゲートセット
+        player.delegate = self
+
+        
+        
         let viewSizeWidth = self.view.frame.width/10
         let viewSizeHeight = self.view.frame.height/10
         
@@ -82,7 +99,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         // music start button
         playButton1 = UIButton()
         playButton1.frame.size = CGSizeMake(buttonWidth, buttonHeight)
-        playButton1.layer.position = CGPoint(x: viewSizeWidth*2, y: viewSizeHeight*2)
+        playButton1.layer.position = CGPoint(x: viewSizeWidth*2, y: viewSizeHeight*8)
         playButton1.setTitle("music start1", forState: UIControlState.Normal)
         playButton1.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         playButton1.backgroundColor = UIColor.grayColor()
@@ -92,7 +109,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         // music start 2 button
         playButton2 = UIButton()
         playButton2.frame.size = CGSizeMake(buttonWidth, buttonHeight)
-        playButton2.layer.position = CGPoint(x: viewSizeWidth*6, y: viewSizeHeight*2)
+        playButton2.layer.position = CGPoint(x: viewSizeWidth*6, y: viewSizeHeight*8)
         playButton2.setTitle("music start2", forState: UIControlState.Normal)
         playButton2.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         playButton2.backgroundColor = UIColor.grayColor()
@@ -106,36 +123,32 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func onClicPlay(sender: UIButton){
+    func onClicPlay1(sender: UIButton){
+        println("onClickPlay1")
+        playSound(sender)
+    }
+    
+    func onClicPlay2(sender: UIButton){
+        println("onClickPlay2")
+        //playSound(sender)
+        println(player.playing)
+        
+    }
+    
+    func playSound(sender: UIButton) {
         
         
-        // Document から音声ファイルを取得
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
-        let filePath : String = (documentsPath as String) + "/Recorded.m4a"
-        
-        // ファイルパス
-        let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
-        
-        // AVAudioPlayerのインスタンス生成
-        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
-        
-        println(player.url)
-        
-        // AVAudioPlayerのデリゲートセット
-        player.delegate = self
-
-        
+        println(player.playing)
+         
         if player.playing == true {
             player.stop()
             sender.setTitle("start", forState: .Normal)
         } else {
             player.play()
             sender.setTitle("stop", forState: .Normal)
+            println("start sound")
+            println(player.playing)
         }
-    }
-    
-    func onClicPlay2(sender: UIButton){
-        println("onClickPlay2")
     }
     
     
