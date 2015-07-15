@@ -9,8 +9,21 @@
 import Foundation
 import UIKit
 
-class PlayViewController : UIViewController {
+class EditViewController : UIViewController {
     
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet var stopButton: UIView!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var peakLabel: UILabel!
+    @IBOutlet weak var apcLabel: UILabel!
+ 
+    @IBAction func pushRecord(sender: AnyObject) {
+        println("push Record")
+    }
+    @IBAction func pushStop(sender: AnyObject) {
+        println("push Stop")
+    }
     
     
 }
