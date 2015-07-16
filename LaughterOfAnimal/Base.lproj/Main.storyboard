@@ -89,6 +89,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKl-iv-7yU">
+                                <rect key="frame" x="123" y="407" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -96,6 +102,7 @@
                         <outlet property="apcLabel" destination="yAm-06-Xwl" id="L2m-EY-7mc"/>
                         <outlet property="peakLabel" destination="Fdl-CY-pMt" id="eDN-Nf-M70"/>
                         <outlet property="recordButton" destination="MaR-Ql-Rzu" id="VQf-2c-4RH"/>
+                        <outlet property="statusLabel" destination="xKl-iv-7yU" id="NbZ-IK-J1M"/>
                         <outlet property="stopButton" destination="kQ9-j1-lg7" id="Eas-BU-MJp"/>
                         <outlet property="timeLabel" destination="bJ7-Oz-bM0" id="32F-B9-4ko"/>
                     </connections>
