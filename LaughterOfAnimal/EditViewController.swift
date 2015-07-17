@@ -84,9 +84,7 @@ class EditViewController : UIViewController,AVAudioPlayerDelegate {
         //        println(player.url)
         
         // AVAudioPlayerのデリゲートセット
-        player.delegate = self
-        
-        
+        // player.delegate = self
         
         let viewSizeWidth = self.view.frame.width/10
         let viewSizeHeight = self.view.frame.height/10
