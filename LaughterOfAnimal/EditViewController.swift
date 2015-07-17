@@ -71,20 +71,23 @@ class EditViewController : UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TODO: 起動時1発目はファイルがないので、fileURL=nilとなる
+        
         // Document から音声ファイルを取得
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
         let filePath : String = (documentsPath as String) + "/Recorded.m4a"
         
         // ファイルパス
         let fileURL : NSURL = NSURL(fileURLWithPath: filePath)!
+        println(fileURL)
         
         // AVAudioPlayerのインスタンス生成
         player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
         
-        //        println(player.url)
+        println(player?.url)
         
         // AVAudioPlayerのデリゲートセット
-        // player.delegate = self
+        player?.delegate = self
         
         let viewSizeWidth = self.view.frame.width/10
         let viewSizeHeight = self.view.frame.height/10
