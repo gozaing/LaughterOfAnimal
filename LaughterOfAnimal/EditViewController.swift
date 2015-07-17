@@ -84,8 +84,6 @@ class EditViewController : UIViewController,AVAudioPlayerDelegate {
         // AVAudioPlayerのインスタンス生成
         player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
         
-        println(player?.url)
-        
         // AVAudioPlayerのデリゲートセット
         player?.delegate = self
         
