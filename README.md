@@ -4,7 +4,7 @@
 * AVFoundation
 
 ## description
-* play sound
-* record sound
+* play sound and recorded sound
+* record own sound
  
 
