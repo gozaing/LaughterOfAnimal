@@ -15,6 +15,8 @@
 		4F937E4C1B4AAE050081D6B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F937E4A1B4AAE050081D6B7 /* LaunchScreen.xib */; };
 		4F937E581B4AAE050081D6B7 /* LaughterOfAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937E571B4AAE050081D6B7 /* LaughterOfAnimalTests.swift */; };
 		4FAF7D6F1B53380200694A0B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF7D6E1B53380200694A0B /* EditViewController.swift */; };
+		4FD555B31B63306E007182E9 /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FD555B11B63306E007182E9 /* sample1.mp3 */; };
+		4FD555B41B63306E007182E9 /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FD555B21B63306E007182E9 /* sample2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		4F937E561B4AAE050081D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F937E571B4AAE050081D6B7 /* LaughterOfAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaughterOfAnimalTests.swift; sourceTree = "<group>"; };
 		4FAF7D6E1B53380200694A0B /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		4FD555B11B63306E007182E9 /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sample1.mp3; path = resource/sample1.mp3; sourceTree = SOURCE_ROOT; };
+		4FD555B21B63306E007182E9 /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sample2.mp3; path = resource/sample2.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		4F937E3F1B4AAE050081D6B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FD555B11B63306E007182E9 /* sample1.mp3 */,
+				4FD555B21B63306E007182E9 /* sample2.mp3 */,
 				4F937E401B4AAE050081D6B7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -198,7 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD555B31B63306E007182E9 /* sample1.mp3 in Resources */,
 				4F937E471B4AAE050081D6B7 /* Main.storyboard in Resources */,
+				4FD555B41B63306E007182E9 /* sample2.mp3 in Resources */,
 				4F937E4C1B4AAE050081D6B7 /* LaunchScreen.xib in Resources */,
 				4F937E491B4AAE050081D6B7 /* Images.xcassets in Resources */,
 			);
