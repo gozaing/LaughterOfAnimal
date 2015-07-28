@@ -13,12 +13,6 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     
     var playButton1 : UIButton!
     var playButton2 : UIButton!
-//    var playButton3 : UIButton!
-//    var playButton4 : UIButton!
-//    var playButton5 : UIButton!
-//    var playButton6 : UIButton!
-//    var playButton7 : UIButton!
-//    var playButton8 : UIButton!
 
     var player : AVAudioPlayer!
 
